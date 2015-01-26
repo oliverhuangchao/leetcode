@@ -85,8 +85,32 @@ int reverseInteger(int x){
 	return atoi(m.c_str());
 }
 
+//------ majority element -----
+int majorityElement(std::vector<int>& num){
+	int size = num.size();
+	if(size == 1) return num[0];
+	std::sort(num.begin(), num.end(), myCompareFunc);
+	int tmp = num[0];
+	int count = 1;
+	int max = 1;
+	for(int i=1;i<size;i++){
+		if(num[i] == num[i-1])
+			count++;
+		else{
+			count = 1;
+			if(max < count){
+				max = count;
+				tmp = num[i];
+			}
+		}
+	}
+	return tmp;
+}
 
 
 
+bool myCompareFunc(int x,int y){
+	return x>y? true;false;
+}
 
 

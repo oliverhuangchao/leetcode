@@ -48,10 +48,6 @@ int main(int argc, char** argv){
 */
 
 
-// ------ ldistance ------
-	std::cout<<ldistance("adfadfds","dadada")<<std::endl;
-	std::cout<<ldistance("dinitrophenylhydrazine","acetylphenylhydrazine")<<std::endl;
-	std::cout<<ldistance("cat","fast")<<std::endl;
 //------ finish main part ------
 	clock_t a2 = clock();
 	std::cout<<"cost time isi "<<(double)(a2-a1)/CLOCKS_PER_SEC<<" s"<<std::endl;
